@@ -180,7 +180,7 @@ $ deactivate
 # first you need to load the virtual environment into the shell
 $ source venv/bin/activate
 # then you can run the program
-$ nosetest
+$ pytest
 # once you're done running it, exit the virtual environment
 $ deactivate
 ```

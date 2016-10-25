@@ -22,51 +22,44 @@ class Teller(Employee):
     @method : set_available : none
     @method : serve         : bool
     
-    # defined in Teller
+    # overrided/defined in-class
     @method : __str__       : str   : returns a string representation of the
     Teller instance
     @method : __repr__      : str   : returns a string representation of the
     Teller instance (wraps __str__)
     """
     
-    def __init__(self, name):
+    def __init__(self, name, salary=None):
         """
-        `Teller(name)`
-        Constructs a new Teller instance from the Teller class.
+        `Teller(name, salary)`
+        Constructs a new Teller instance from the Teller class. Inherits
+        directly from Employee's constructor
         
-        @pre    : name must be a properly-formatted UTF-8 string
-        @pre    : name must be a max of 64 characters long and min of 3 chars 
-        @post    : a fairly unique (see python's uuid.uuid4) id will be generated
-        for the teller
-        @post    : instantiates a new Teller object with the given name
-        
-        @param  : self  : the Employee object to operate upon
-        @param  : name  : the name to give the employee
-        @return : bool  : whether or not the employee is available
-        
+        @param  : self      : the Employee object to operate upon
+        @param  : name      : the name to give the employee
+        @param  : salary    : the salary of the employee [default '9600.00']
+        @return : none 
         """
-        super().__init__(name)
-        assert len(name) >= 3
+        super().__init__(name, salary)
     
     def __str__(self):
         """
         `__str__`
-        Represent an teller as a string
+        Represent a teller as a string
         
         @pre    : the given Teller must be initialized
         @post   : the Teller's is_available attribute will be changed to av
         
         @param  : self  : the Teller object to operate upon
         @return : str   : a string representation of the teller, including
-        teller id and name
-        
+        employee id and name
         """
         return "<Teller id='{}' name='{}' />".format(self.employee_id, self.name)
     
     def __repr__(self):
         """
-        `__str__`
-        Represent an teller as a string (wraps self.__str__)
+        `__repr__`
+        Represent a teller as a string (wraps self.__str__)
         
         @pre    : the given Teller must be initialized
         @post   : the Teller's is_available attribute will be changed to av
@@ -74,7 +67,6 @@ class Teller(Employee):
         @param  : self  : the Teller object to operate upon
         @return : str   : a string representation of the teller, including
         teller id and name
-        
         """
         return str(self)
         

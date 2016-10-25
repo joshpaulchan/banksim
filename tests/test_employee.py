@@ -8,8 +8,10 @@ Written by Joshua Paul A. Chan
 import pytest
 import sys, os
 
-# Fix paths (thanks, @aruisdante)[http://stackoverflow.com/questions/24868733/how-to-access-a-module-from-outside-your-file-folder-in-python]
+# Fix paths (thanks, @aruisdante)
+# [http://stackoverflow.com/questions/24868733/how-to-access-a-module-from-outside-your-file-folder-in-python]
 sys.path.append(os.path.abspath(os.path.join('banksim')))
+
 import employee
 
 class TestEmployee:
@@ -25,7 +27,7 @@ class TestEmployee:
         
         # [case: invalid name] names truncated to be 64 chars 
         e = employee.Employee(''.join([str(i % 9) for i in range(108)]))
-        assert hasattr(e, 'name') == True
+        assert hasattr(e, 'name')
         assert len(e.name) == 64
     
     def test_uuid_generation(self):
@@ -36,7 +38,7 @@ class TestEmployee:
         e = employee.Employee('abcd')
         
         # [case: invalid uuid] test that UUID was generated successfully
-        assert hasattr(e, 'employee_id') == True
+        assert hasattr(e, 'employee_id')
         
         # [case: non-unique uuid] test that UUID is (usually) unique
         assert e.employee_id != employee.Employee('fijk').employee_id
@@ -49,7 +51,7 @@ class TestEmployee:
         e = employee.Employee('abcd')
         
         # [case: missing `available` attr]
-        assert hasattr(e, 'available') == True
+        assert hasattr(e, 'available')
         
         # [case: wrong attr `available` type]
         assert type(e.available) == bool
@@ -61,6 +63,36 @@ class TestEmployee:
         """
         e = employee.Employee('abcd')
         
+        # [case: missing or un-callable`.is_available` method]
+        assert hasattr(e, 'is_available')
+        assert callable(e.is_available)
+        
+        # [case: wrong return type]
+        assert type(e.is_available()) == bool
+        
+        # [case: wrong default return]
+        assert e.is_available() == True
+        
+        # [case: irreflective of internal state]
+        e.available = False
+        assert e.is_available() == False
+    
+    def test_set_available(self):
+        """
+        `test_set_available()`
+        Tests the pre- and post-conditions the funtionality of `set_available`
+        """
+        e = employee.Employee('abcd')
+        
+        # [case: missing or un-callable`.set_available` method]
+        assert hasattr(e, 'set_available')
+        assert callable(e.set_available)
+        
+        # [case: incorrect operation]
+        assert e.is_available() != False
+        e.set_available(False)
+        assert e.is_available() == False
+        assert e.available == False
         
         
         

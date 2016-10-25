@@ -31,7 +31,7 @@ class Employee(object):
     
     def __init__(self, name, salary=None):
         """
-        `Employee(name)`
+        `Employee(name, salary)`
         Constructs a new Employee instance from the Employee class.
         
         @pre    : name must be a properly-formatted UTF-8 string
@@ -44,7 +44,7 @@ class Employee(object):
         @param  : self      : the Employee object to operate upon
         @param  : name      : the name to give the employee
         @param  : salary    : the salary of the employee [default '9600.00']
-        @return : Employee  :
+        @return : none 
         """
         assert type(name) == str
         assert len(name) >= 2

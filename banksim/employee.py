@@ -1,10 +1,8 @@
-"""
-`employee.py`
-An abstract employee class that contains the basic rudimentary information a
-bank employee requires.
-
-Written by Joshua Paul A. Chan
-"""
+# `employee.py`
+# An abstract employee class that contains the basic rudimentary information a
+# bank employee requires.
+# 
+# Written by Joshua Paul A. Chan
 
 from uuid import uuid4 as gen_id
 

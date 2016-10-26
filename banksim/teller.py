@@ -1,9 +1,9 @@
-"""
-`teller.py`
-A bank teller class used to serve users from a queue.
+#
+# `teller.py`
+# A bank teller class used to serve users from a queue.
+# 
+# Written by Joshua Paul A. Chan
 
-Written by Joshua Paul A. Chan
-"""
 
 from employee import Employee
 

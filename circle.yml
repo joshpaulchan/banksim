@@ -1,0 +1,7 @@
+test:
+  pre:
+    - source venv/bin/activate
+  override:
+    - pytest -v
+  post:
+    - deactivate

@@ -2,9 +2,5 @@ machine:
   python:
     version: 3.5.0
 test:
-  pre:
-    - source venv/bin/activate
   override:
     - pytest -v
-  post:
-    - deactivate

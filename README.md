@@ -1,6 +1,8 @@
 # Programming Methodology II | Project 1
 Joshua Chan | 1490009699 | jpc256
 
+[![CircleCI](https://circleci.com/gh/joshpaulchan/banksim.svg?style=svg)](https://circleci.com/gh/joshpaulchan/banksim)
+
 We discussed the decision faced by a Bank Manager on whether to hire additional
 teller(s) to supplement the existing single teller, so as to provide better
 service to customers (she wants to know how better the service will be given the

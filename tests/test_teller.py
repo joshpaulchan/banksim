@@ -15,7 +15,7 @@ sys.path.append(os.path.abspath(os.path.join('banksim')))
 from employee import Employee
 import teller
 
-class TestEmployee:
+class TestTeller:
     
     # 
     # Test Inheritance

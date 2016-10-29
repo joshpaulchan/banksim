@@ -1,0 +1,65 @@
+<img src='http://g.gravizo.com/g?
+/**
+*Employee
+*@opt all
+*/
+class Employee {
+  static public String employee_id;
+  static string salary;
+  static public String name;
+  static boolean available;
+  public boolean is_available();
+  public boolean set_available();
+}
+/**
+*Teller
+*@opt all
+*/
+class Teller extends Employee {
+  public void serve();
+}
+/**
+*Customer
+*@opt all
+*/
+class Customer {
+  static public String customer_id;
+  static public String name;
+  static boolean visit_purpose;      
+  static boolean served;
+  public boolean was_served();
+  public void serve();
+}
+/**
+*ReceptionQueue
+*@opt all
+*@has 1 - 0.. Customer
+*/
+class ReceptionQueue {
+  static public Customer[] customers;
+  public void insert_customer();
+  public Customer get_next_customer();
+}
+/**
+*Bank
+*@opt all
+*@composed 1 - 1.. Teller  
+*@composed 1 - 1 ReceptionQueue  
+*/
+class Bank {
+  static Teller[] tellers;
+  static ReceptionQueue customers;
+  static boolean operating;
+  public boolean is_open();
+  public void open();
+  public void close();
+  public void receive_customer();
+}
+'/>
+
+
+  
+
+
+
+  

@@ -83,13 +83,13 @@ class Customer(object):
     def __str__(self):
         """
         `__str__`
-        Represent a teller as a string
+        Represent a customer as a string
         
         @pre    : the given Customer must be initialized
         @post   : the Customer's is_available attribute will be changed to av
         
         @param  : self  : the Customer object to operate upon
-        @return : str   : a string representation of the teller, including
+        @return : str   : a string representation of the customer, including
         customer id and name
         """
         return "<Customer id='{}' name='{}' served='{}'/>".format(self.customer_id, self.name, self.was_served())
@@ -97,14 +97,14 @@ class Customer(object):
     def __repr__(self):
         """
         `__repr__`
-        Represent a teller as a string (wraps self.__str__)
+        Represent a customer as a string (wraps self.__str__)
         
         @pre    : the given Customer must be initialized
         @post   : the Customer's is_available attribute will be changed to av
         
         @param  : self  : the Customer object to operate upon
-        @return : str   : a string representation of the teller, including
-        teller id and name
+        @return : str   : a string representation of the customer, including
+        customer id and name
         """
         return str(self)
         

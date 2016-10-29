@@ -49,35 +49,52 @@ class TestCustomer:
         # [case: non-unique uuid] test that UUID is (usually) unique
         assert e.customer_id != customer.Customer('fijk').customer_id
     
-    def test_available(self):
+    def test_served(self):
         """
-        `test_available()`
-        Tests the pre- and post-conditions of the available attribute
+        `test_served()`
+        Tests the pre- and post-conditions of the served attribute
         """
         e = customer.Customer('abcd')
         
-        # [case: missing `available` attr]
-        assert hasattr(e, 'available')
+        # [case: missing `served` attr]
+        assert hasattr(e, 'served')
         
-        # [case: wrong attr `available` type]
-        assert type(e.available) == bool
+        # [case: wrong attr `served` type]
+        assert type(e.served) == bool
+        
+        # [case: wrong initival value of `served` attr]
+        assert e.served == False
+    
+    def test_was_served(self):
+        """
+        `test_was_served()`
+        Tests the pre- and post-conditions the funtionality of `was_served`
+        """
+        e = customer.Customer('abcd')
+        
+        # [case: missing or un-callable`.was_served` method]
+        assert hasattr(e, 'was_served')
+        assert callable(e.was_served)
+        
+        # [case: incorrect operation]
+        e.served = True
+        assert e.was_served() == True
     
     def test_serve(self):
         """
-        `test_set_available()`
-        Tests the pre- and post-conditions the funtionality of `set_available`
+        `test_serve()`
+        Tests the pre- and post-conditions the funtionality of `serve`
         """
         e = customer.Customer('abcd')
         
-        # [case: missing or un-callable`.set_available` method]
-        assert hasattr(e, 'set_available')
-        assert callable(e.set_available)
+        # [case: missing or un-callable`.serve` method]
+        assert hasattr(e, 'serve')
+        assert callable(e.serve)
         
         # [case: incorrect operation]
-        assert e.is_available() != False
-        e.set_available(False)
-        assert e.is_available() == False
-        assert e.available == False
+        assert e.was_served() == False
+        e.serve()
+        assert e.was_served() and e.served == True
             
         
         

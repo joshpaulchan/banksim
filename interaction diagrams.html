@@ -1,0 +1,30 @@
+<img src='http://g.gravizo.com/g?
+@startuml;
+actor Customer;
+participant "Bank" as bank;
+participant "ReeceptionQueue" as rq;
+activate bank;
+loop while bank is open;
+  Customer --> bank : visit bank receive_customer;
+  alt if teller available;
+    bank --> rq : get_next_customer;
+    activate rq;
+    rq --> bank : return customer;
+    deactivate rq;
+    activate bank;
+    bank --> bank : use teller to serve customer;
+    deactivate bank;
+  else if no teller available;
+    bank --> rq : insert_customer;
+  end;
+end;
+deactivate bank;
+@enduml;
+'/>
+
+
+  
+
+
+
+  

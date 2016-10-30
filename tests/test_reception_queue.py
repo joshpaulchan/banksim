@@ -10,10 +10,10 @@ import sys, os
 
 # Fix paths (thanks, @aruisdante)
 # [http://stackoverflow.com/questions/24868733/how-to-access-a-module-from-outside-your-file-folder-in-python]
-sys.path.append(os.path.abspath(os.path.join('banksim')))
+sys.path.append(os.path.abspath(os.path.join('.')))
 
-from customer import Customer
-from reception_queue import ReceptionQueue as rq
+from banksim.customer import Customer
+from banksim.reception_queue import ReceptionQueue as rq
 
 class TestReceptionQueue:
     

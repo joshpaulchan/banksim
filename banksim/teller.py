@@ -5,7 +5,7 @@
 # Written by Joshua Paul A. Chan
 
 
-from employee import Employee
+from .employee import Employee
 
 class Teller(Employee):
     """

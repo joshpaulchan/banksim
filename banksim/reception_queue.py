@@ -3,7 +3,7 @@
 # 
 # Written by Joshua Paul A. Chan
 
-import customer
+from .customer import Customer
 
 class ReceptionQueue(object):
     """
@@ -44,7 +44,7 @@ class ReceptionQueue(object):
         @param  : cust  : Customer          : The Customer or Customer-like
         object to add to the customer list
         """
-        assert isinstance(cust, customer.Customer)
+        assert isinstance(cust, Customer)
         assert not cust.was_served()
         
         # FIFO
@@ -110,7 +110,7 @@ def main():
     q = ReceptionQueue()
     
     for i in range(1, 10):
-        c = customer.Customer(str(i).zfill(3))
+        c = Customer(str(i).zfill(3))
         q.insert_customer(c)
 
     print("length: {}".format(len(q)))

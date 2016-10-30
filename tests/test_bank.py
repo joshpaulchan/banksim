@@ -80,6 +80,10 @@ class TestBank:
         # [ case : should have a 'close' method ]
         assert hasattr(b, 'close')
         assert callable(b.close)
+        
+        # [ case : should have a 'receive_customer' method ]
+        assert hasattr(b, 'receive_customer')
+        assert callable(b.receive_customer)
 
 class TestBankOpenAndClose:
     
@@ -96,18 +100,30 @@ class TestBankOpenAndClose:
         with pytest.raises(Exception):
             b.receive_customer(c)
         
-        
         # [ case : should be able to add only customers to open bank ]
         b.open()
         assert b.is_open() == True
         b.receive_customer(c)
-        fail_vals = [1, 0, 'asdg', False]
-        for val in fail_vals:
-            with pytest.raises(AssertionError):
-                b.receive_customer(val)
-        
         # [ case : should be able to close bank after opening ]
         assert b.is_open() == True
         b.close()
         with pytest.raises(Exception):
             b.receive_customer(c)
+
+class TestBankReceiveCustomer:
+    
+    def test_receive_customer(self):
+        """
+        `test_receive_customer()`
+        Tests the pre- and post- conditions of .receive_customer
+        """
+        b = bk()
+        b.open()
+        c = Customer("Johnny")
+        
+        # [ case : should only be able to add customers to banks ]
+        b.receive_customer(c)
+        fail_vals = [1, 0, 'asdg', False]
+        for val in fail_vals:
+            with pytest.raises(AssertionError):
+                b.receive_customer(val)

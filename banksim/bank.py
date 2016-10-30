@@ -38,9 +38,11 @@ class Bank(object):
         self.tellers = [Teller(str(i).zfill(3)) for i in range(n_tellers)]
         self.customers = ReceptionQueue()
         self.operating = False
-        
-    def _step_(self):
-        pass
+    
+    def update(self):
+        # Tellers finish servicing after 1 time step
+        for teller in self.tellers:
+            if not teller.is_available(): teller.set_available(True)
         
     def is_open(self):
         return self.operating == True
@@ -58,15 +60,8 @@ class Bank(object):
         else:
             self.customers.insert_customer(cust)
     
-    def __str__(self):
-        pass
-    
-    def __repr__(self):
-        pass
-
 def main():
     pass
     
-
 if __name__ == '__main__':
     main()

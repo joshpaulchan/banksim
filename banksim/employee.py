@@ -6,6 +6,8 @@
 
 from uuid import uuid4 as gen_id
 
+from .customer import Customer
+
 class Employee(object):
     """
     `Employee`
@@ -101,16 +103,18 @@ class Employee(object):
         @return : bool  : whether an employee was successful in servicing the
         given customer  
         """
-        print(str(type(cust)))
-        # assert str(type(cust)) is 'Customer'
-        if not self.is_available(): raise Error("{} is currently busy.".format(self))
+        assert isinstance(cust, Customer)
+         
+        if not self.is_available():
+            raise Exception("{} is currently busy.".format(self))
         
         # check customer purpose
-        purpose = cust.get_purpose()
         can_help_with_purpose = True
-        # if applicable, make busy
         
-        if can_help_with_purpose: self.set_available(False)
+        # if applicable, make busy
+        if can_help_with_purpose:
+            self.set_available(False)
+            cust.serve()
     
     def __str__(self):
         """

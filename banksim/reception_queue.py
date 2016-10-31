@@ -67,6 +67,19 @@ class ReceptionQueue(object):
         # FIFO
         return self.customers.pop(0)
     
+    def __iter__(self):
+        """
+        `__iter__`
+        Allow the ReceptionQueue to be iterated upon in a pythonic way
+        
+        @pre    : The ReceptionQueue object must be initialized
+        @post   : A iterable object will be returned
+        
+        @param  : self  : the ReceptionQueue object to operate upon
+        @return : iter  : an iterable view over the ReceptionQueue's customers
+        """
+        return self.customers.__iter__()    
+    
     def __len__(self):
         """
         `__len__`

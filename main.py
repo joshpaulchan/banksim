@@ -5,6 +5,7 @@
 # Written by Joshua Paul A. Chan
 
 import argparse
+import math
 
 from banksim.customer import Customer
 from banksim.bank import Bank
@@ -30,19 +31,18 @@ def distribute(items, ticks):
     individual list
     """
     assert type(items) == list
-    
     assert type(ticks) == int
     assert ticks > 0
     
-    buckets = []
-    chunk = []
+    i = 0
+    items_per_bucket = math.ceil(len(items) / ticks)
+    buckets = [ [] for _ in range(ticks) ]
     
-    for i, item in enumerate(items):
-        chunk.append(item)
-        if ticks % (i + 1) == 0:
-            buckets.append(chunk)
-            chunk = []
-    buckets.append(chunk)
+    for j, item in enumerate(items):
+        if j % items_per_bucket == 0:
+            bucket = buckets[i]
+            i += 1
+        bucket.append(item)
     
     return buckets
 
@@ -50,10 +50,10 @@ def main():
     args = parser.parse_args()
     
     def log(s):
-        print(s) if args.verbose
+        if args.verbose: print(s) 
     
-    N = args.c
-    n_tellers = args.t
+    N = args.c if args.c > 0 else 1
+    n_tellers = args.t if args.t > 0 else 1
     
     # instantiate the bank
     bank = Bank(n_tellers)
@@ -65,11 +65,15 @@ def main():
     
     visitors_over_time = distribute(
         [Customer(str(n).zfill(3)) for n in range(N)],
-        N
+        n_tellers
     )
     
     while bank.is_open():
         log("=" * 32 + " timestep: {} ".format(str(t).zfill(4)) + "=" * 32)
+            
+        # update waiting times
+        for customer in bank.customers:
+            customer.wait_a_little()
         
         # get new customers
         if t < len(visitors_over_time):
@@ -105,7 +109,6 @@ def main():
         # if no more customers visiting, break
         if t >= len(visitors_over_time) - 1 and len(bank.customers) == 0:
             bank.close()
-        
     
     print("=" * 80)
     print("[stats]")

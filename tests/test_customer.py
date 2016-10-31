@@ -95,6 +95,23 @@ class TestCustomer:
         assert e.was_served() == False
         e.serve()
         assert e.was_served() and e.served == True
-            
+    
+    def test_wait_a_little(self):
+        """
+        `test_wait_a_little()`
+        Tests the pre- and post-conditions the funtionality of `wait_a_little`
+        """
+        e = Customer('abcd')
         
+        # [case: missing or un-callable`.wait_a_little` method]
+        assert hasattr(e, 'wait_a_little')
+        assert callable(e.wait_a_little)
         
+        # [case: default waiting value is 1]
+        old_time = e.has_waited
+        e.wait_a_little()
+        assert e.has_waited - 1 == old_time
+        
+        # [ case : negative numbers are a no-go]
+        with pytest.raises(AssertionError):
+            e.wait_a_little(-1)

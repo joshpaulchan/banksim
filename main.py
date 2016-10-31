@@ -65,7 +65,7 @@ def main():
     
     visitors_over_time = distribute(
         [Customer(str(n).zfill(3)) for n in range(N)],
-        n_tellers
+        10
     )
     
     while bank.is_open():

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>README</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(186, 190, 189); overflow: auto; background-color: rgb(14, 17, 18); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(143, 151, 148); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(186, 190, 189); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(143, 151, 148); border-color: rgb(50, 60, 64); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(50, 60, 64); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(50, 60, 64); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(32, 39, 41); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(23, 28, 29); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(50, 60, 64) rgb(50, 60, 64) rgb(36, 44, 47); background-color: rgb(32, 39, 41); }
+.markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.marko-tag,
+.marko-attribute {
+  color: #61aeef !important;
+}
+.marko-placeholder {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+.pre.editor-colors,
+.host {
+  background-color: #0e1112;
+  color: #babebd;
+}
+.pre.editor-colors,
+.host {
+  background-color: #0e1112;
+  color: #babebd;
+}
+.pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background: rgba(245, 250, 255, 0.04);
+}
+.pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: rgba(245, 250, 255, 0.04);
+}
+.pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: rgba(255, 255, 255, 0.1);
+}
+.pre.editor-colors .gutter,
+.host .gutter {
+  background-color: #090b0d;
+  color: #4d5a5e;
+}
+.pre.editor-colors .gutter .line-number,
+.host .gutter .line-number {
+  background: #090b0d;
+  color: #4d5a5e;
+  padding-left: 10px;
+}
+.pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  background-color: #0e1112;
+  color: #7494a3;
+  font-weight: 100;
+}
+.pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  background-color: #0e1112 !important;
+  color: #7494a3;
+}
+.pre.editor-colors .gutter .line-number:hover,
+.host .gutter .line-number:hover {
+  background-color: #090b0d !important;
+  color: #7494a3;
+}
+.pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+.pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+.pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #FFF;
+  background: #4d5a5e;
+}
+.pre.editor-colors .invisible,
+.host .invisible {
+  color: rgba(255, 255, 255, 0.1);
+}
+.pre.editor-colors .cursor,
+.host .cursor {
+  border-color: #babebd !important;
+  border-left: solid 2px;
+}
+.pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #293c44;
+}
+.pre.editor-colors .scroll-view,
+.host .scroll-view {
+  padding-left: 10px;
+}
+.pre.editor-colors .line.cursor-line,
+.host .line.cursor-line {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+.bracket-matcher .region {
+  border-bottom: 1px solid #7494a3;
+  margin-top: 2px;
+}
+pre.editor-colors[mini] .scroll-view,
+.host(.mini) .scroll-view {
+  padding-left: 1px;
+}
+.text {
+  color: #babebd;
+}
+.complete_tag {
+  color: #cc3e44;
+}
+.comment {
+  color: #4d5a5e;
+  background: none;
+}
+.constant {
+  color: #519aba;
+}
+.constant.character.escape {
+  color: #519aba;
+}
+.constant.name.attribute.tag {
+  color: #7494a3;
+}
+.constant.numeric {
+  color: #519aba;
+}
+.constant.other.color {
+  color: #519aba;
+}
+.constant.other.symbol {
+  color: #519aba;
+}
+.entity {
+  color: #cbcb41;
+}
+.entity.name.class,
+.entity.name.type.class {
+  color: #519aba;
+}
+.entity.name.function {
+  color: #cbcb41;
+}
+.entity.name.section {
+  color: #cbcb41;
+}
+.entity.name.tag {
+  color: #7494a3;
+  text-decoration: none;
+}
+.entity.name.tag.block,
+.entity.name.tag.inline,
+.entity.name.tag.name {
+  color: #7494a3;
+}
+.entity.name.tag.structure {
+  color: #7494a3;
+}
+.entity.name.tag.block {
+  color: #7494a3;
+}
+.entity.name.type {
+  color: #7494a3;
+  text-decoration: none;
+}
+.entity.name.type.tag {
+  color: #a074c4;
+}
+.entity.other.attribute-name {
+  color: #a074c4;
+}
+.entity.other.attribute-name.id {
+  color: #a074c4;
+}
+.entity.other.inherited-class {
+  color: #cbcb41;
+}
+.invalid.illegal,
+.invalid.deprecated {
+  background: none;
+  color: #cc3e44;
+}
+.keyword {
+  color: #8dc149;
+}
+.keyword.control {
+  color: #a074c4;
+}
+.keyword.operator {
+  color: #8dc149;
+}
+.keyword.operator.assignment {
+  color: #4d5a5e;
+}
+.keyword.operator.new {
+  color: #cc3e44;
+}
+.keyword.other.important {
+  color: #cc3e44;
+}
+.keyword.other.special-method {
+  color: #8dc149;
+}
+.keyword.other.unit {
+  color: #8dc149;
+}
+.markup.bold {
+  color: #babebd;
+  font-weight: bold;
+}
+.markup.changed {
+  color: #babebd;
+}
+.markup.deleted {
+  color: #babebd;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #babebd;
+}
+.markup.inserted {
+  color: #babebd;
+}
+.markup.italic {
+  color: #babebd;
+  font-style: italic;
+}
+.markup.list {
+  color: #babebd;
+}
+.markup.quote {
+  color: #b1c3cc;
+}
+.markup.raw.inline {
+  color: #babebd;
+}
+.meta.link {
+  color: #babebd;
+}
+.meta.require {
+  color: #babebd;
+}
+.meta.brace.curly {
+  color: #6b7471;
+}
+.meta.brace.round {
+  color: #babebd;
+}
+.meta.control.flow {
+  color: #a074c4;
+}
+.meta.comma {
+  color: #4d5a5e;
+}
+.meta.selector {
+  color: #4d5a5e;
+}
+.meta.separator {
+  background-color: #4d5a5e;
+  color: #4d5a5e;
+}
+.meta.tag {
+  color: #7494a3;
+}
+.none {
+  color: #babebd;
+}
+.punctuation {
+  color: #4d5a5e;
+}
+.punctuation.terminator {
+  color: #4d5a5e;
+}
+.punctuation.separator {
+  color: #4d5a5e;
+}
+.punctuation.definition {
+  color: #4d5a5e;
+}
+.punctuation.definition.array {
+  color: #7494a3;
+}
+.punctuation.definition.bold {
+  color: #babebd;
+  font-weight: bold;
+}
+.punctuation.definition.comment {
+  color: #4d5a5e;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity,
+.punctuation.definition.italic {
+  color: #babebd;
+}
+.punctuation.definition.italic {
+  font-style: italic;
+}
+.punctuation.definition.string {
+  color: #7494a3;
+}
+.punctuation.definition.string.begin,
+.punctuation.definition.string.end {
+  color: #b1c3cc;
+}
+.punctuation.definition.variable {
+  color: #cc3e44;
+}
+.punctuation.definition.parameters {
+  color: #babebd;
+}
+.punctuation.definition.tag {
+  color: #7494a3;
+}
+.punctuation.section.embedded {
+  color: #babebd;
+}
+.string {
+  color: #7494a3;
+}
+.string .constant {
+  color: #519aba;
+}
+.string.interpolated {
+  color: #cc3e44;
+}
+.string.regexp {
+  color: #7494a3;
+}
+.string.regexp .constant.character.escape,
+.string.regexp .source.ruby.embedded,
+.string.regexp .string.regexp.arbitrary-repitition {
+  color: #7494a3;
+}
+.string.regexp.group {
+  color: #7494a3;
+}
+.string.regexp.character-class {
+  color: #7494a3;
+}
+.string.regexp .source.ruby.embedded {
+  color: #7494a3;
+}
+.string.quoted.double {
+  color: #b1c3cc;
+}
+.string.quoted.single {
+  color: #b1c3cc;
+}
+.string .variable {
+  color: #cc3e44;
+}
+.string.other.link {
+  color: #7494a3;
+}
+.source {
+  color: #7494a3;
+}
+.storage {
+  color: #d4d7d6;
+}
+.storage.modifier {
+  color: #d4d7d6;
+}
+.storage.type.class {
+  color: #d4d7d6;
+}
+.storage.type.function {
+  color: #d4d7d6;
+}
+.storage.type.var {
+  color: #d4d7d6;
+}
+.support {
+  color: #519aba;
+}
+.support.class {
+  color: #519aba;
+}
+.support.function {
+  color: #cbcb41;
+}
+.support.function.decl {
+  color: #7494a3;
+}
+.support.constant {
+  color: #519aba;
+}
+.support.type.property-name {
+  color: #babebd;
+}
+.variable {
+  color: #cc3e44;
+}
+.variable.control.import.include {
+  color: #a074c4;
+}
+.variable.other {
+  color: #8dc149;
+}
+.variable.other.property {
+  color: #8dc149;
+}
+.variable.other.module {
+  color: #519aba;
+}
+.variable.other.module-alias {
+  color: #7494a3;
+}
+.variable.other.object {
+  color: #a074c4;
+}
+.variable.parameter.function {
+  color: #cbcb41;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json {
+  color: #7494a3;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json > .punctuation.string {
+  color: #7494a3;
+}
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json > .punctuation,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json > .punctuation {
+  color: #babebd;
+}
+.source.json .meta.structure.dictionary.json > .constant.language.json,
+.source.json .meta.structure.array.json > .constant.language.json {
+  color: #519aba;
+}
+.mustache .meta.tag.template {
+  color: #7494a3;
+}
+.mustache .meta.tag.template .entity.name.tag {
+  color: #b1c3cc;
+}
+.source.python .class {
+  color: #519aba;
+}
+.source.python .support.function.magic,
+.source.python .inherited-class {
+  color: #d7666b;
+}
+.source.python .support.function.magic .support.function.builtin.python,
+.source.python .inherited-class .support.function.builtin.python {
+  color: #d7666b;
+}
+.source.python .storage,
+.source.python .keyword {
+  color: #d4d7d6;
+}
+.source.python .string {
+  color: #7494a3;
+}
+.source.python .string.block {
+  color: #465f6b;
+}
+.source.python .string.block .keyword {
+  color: #465f6b;
+}
+pre.editor-colors .line.split-diff-added,
+pre.editor-colors::shadow .line.split-diff-added {
+  background: #8dc149 !important;
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+pre.editor-colors .line.split-diff-added .text span,
+pre.editor-colors::shadow .line.split-diff-added .text span,
+pre.editor-colors .line.split-diff-added .source span,
+pre.editor-colors::shadow .line.split-diff-added .source span {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+pre.editor-colors .line.split-diff-added .indent-guide,
+pre.editor-colors::shadow .line.split-diff-added .indent-guide {
+  opacity: 0;
+}
+pre.editor-colors .line.split-diff-removed,
+pre.editor-colors::shadow .line.split-diff-removed {
+  background: #cc3e44 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+pre.editor-colors .line.split-diff-removed .text span,
+pre.editor-colors::shadow .line.split-diff-removed .text span,
+pre.editor-colors .line.split-diff-removed .source span,
+pre.editor-colors::shadow .line.split-diff-removed .source span {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+pre.editor-colors .line.split-diff-removed .indent-guide,
+pre.editor-colors::shadow .line.split-diff-removed .indent-guide {
+  opacity: 0;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1 id="programming-methodology-ii-project-1">Programming Methodology II | Project 1</h1>
+<p>Joshua Chan | 1490009699 | jpc256</p>
+<p><a href="https://circleci.com/gh/joshpaulchan/banksim"><img src="https://circleci.com/gh/joshpaulchan/banksim.svg?style=svg" alt="CircleCI"></a></p>
+<h1 id="get-started">Get Started</h1>
+<h2 id="installation">Installation</h2>
+<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>$&nbsp;pip&nbsp;install&nbsp;-r&nbsp;requirements.txt</span></span></div></pre>
+<h2 id="running-the-project">Running the project</h2>
+<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;first&nbsp;you&nbsp;need&nbsp;to&nbsp;load&nbsp;the&nbsp;virtual&nbsp;environment&nbsp;into&nbsp;the&nbsp;shell</span></span></span></div><div class="line"><span class="source shell"><span>$&nbsp;</span><span class="support function builtin shell"><span>source</span></span><span>&nbsp;venv/bin/activate</span></span></div><div class="line"><span class="source shell"><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;then&nbsp;you&nbsp;can&nbsp;run&nbsp;the&nbsp;program</span></span></span></div><div class="line"><span class="source shell"><span>$&nbsp;python&nbsp;main.py&nbsp;100&nbsp;-t&nbsp;1</span></span></div><div class="line"><span class="source shell"><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;once&nbsp;you&#39;re&nbsp;done&nbsp;running&nbsp;it,&nbsp;exit&nbsp;the&nbsp;virtual&nbsp;environment</span></span></span></div><div class="line"><span class="source shell"><span>$&nbsp;deactivate</span></span></div></pre>
+<p>The first number, <code style="font-family: Monaco;">100</code> indicates the amount of customers that will visit in
+this simulation. The option <code style="font-family: Monaco;">-t</code> is the number of tellers.</p>
+<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>$&nbsp;python&nbsp;main.py&nbsp;100&nbsp;-t&nbsp;1</span></span></div></pre>
+<h2 id="testing-the-project">Testing the project</h2>
+<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;first&nbsp;you&nbsp;need&nbsp;to&nbsp;load&nbsp;the&nbsp;virtual&nbsp;environment&nbsp;into&nbsp;the&nbsp;shell</span></span></span></div><div class="line"><span class="source shell"><span>$&nbsp;</span><span class="support function builtin shell"><span>source</span></span><span>&nbsp;venv/bin/activate</span></span></div><div class="line"><span class="source shell"><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;then&nbsp;you&nbsp;can&nbsp;run&nbsp;the&nbsp;program</span></span></span></div><div class="line"><span class="source shell"><span>$&nbsp;pytest&nbsp;-v</span></span></div><div class="line"><span class="source shell"><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;once&nbsp;you&#39;re&nbsp;done&nbsp;running&nbsp;it,&nbsp;exit&nbsp;the&nbsp;virtual&nbsp;environment</span></span></span></div><div class="line"><span class="source shell"><span>$&nbsp;deactivate</span></span></div></pre>
+<p>Additionally, builds are tested automatically using CircleCI. Check the badge at
+the top of this document for the most recent build status.</p>
+<h1 id="assignment">Assignment</h1>
+<h2 id="i-formulate-and-transcribe-problem-and-use-case-s-">I. Formulate and transcribe problem and use case(s).</h2>
+<p>The prompt is: &quot;We discussed the decision faced by a Bank Manager on whether to
+hire additional teller(s) to supplement the existing single teller, so as to
+provide better service to customers (she wants to know how better the service
+will be given the additional cost):&quot;</p>
+<p>What this is really saying is:</p>
+<ol>
+<li>Build a system that simulates in-person bank teller(s) and account holder(s)
+(customers) interactions.</li>
+<li>Measure the effectiveness of varying the number of tellers with respect to
+different loads of customers.</li>
+</ol>
+<blockquote>
+<p>A system like this is useful because the client (the Bank Manager) can use this
+system to gain critical insight into potential customer scenarios and use that
+insight to make key staffing decisions.</p>
+</blockquote>
+<p>To build such a system, we will need to do a few things, mainly:</p>
+<ul>
+<li>Define the capabilities of a teller</li>
+<li>Define the scenarios/interactions a customer might produce</li>
+<li>Define a &quot;reception orders&quot; that determines when which customers will be
+served</li>
+</ul>
+<p>For our simulation, we will be assuming:</p>
+<ul>
+<li>The simulation runs in a discrete fashion<ul>
+<li>Customers enter at discrete time steps</li>
+<li>It takes unit time steps to serve a customer, regardless of purpose and
+teller capability</li>
+<li>The simulation on runs until all the customers in the queue have been served
+(after the first &quot;wave&quot; the bank closes)</li>
+</ul>
+</li>
+<li>Customers come in in a constant, even rate - similar to a square wave.</li>
+</ul>
+<p>I designed a few Actor/Participant classes to encapsulate and objectify the
+operators in the scenarios (Customers, Tellers, and ReceptionQueue), as well as
+a container class to run the entire simulation (Bank).</p>
+<p><img src="/Users/joshuapaulchan/Desktop/PM2P1/Screen Shot 2016-10-31 at 3.12.08 PM.png" alt=""></p>
+<p>I chose to make <code style="font-family: Monaco;">Teller</code> an sub-class of a virtual <code style="font-family: Monaco;">Employee</code> so that in the
+future we have the flexibility to introduce different kinds of service-men to
+the Bank. I also gave it a salary and a few other non-relevant attributes for
+system book-keeping purposes and the ability to run possible finanical
+simulations at a later time.</p>
+<p>I made ReceptionQueue to model a real line/queue&#39;s FIFO behavior, but it is also
+trivial to modify the class so that the insertion behavior can be changed such
+that the queue implements other behaviors like LIFO or else.</p>
+<p>Because we made the choice to go discrete, I chose to simplify the functionality
+of the Bank by making its operations synchronous, rather than worry about
+possible issues with Pub-Sub/Asynchronous models that may lead to timing issues
+and difficulty in modeling. Thus, the main flow essentially resembles this:</p>
+<p><img src="/Users/joshuapaulchan/Desktop/PM2P1/Screen Shot 2016-10-31 at 3.12.33 PM.png" alt=""></p>
+<h2 id="ii-implement-a-simulation-that-will-mimic-the-arrival-of-customers-service-by-the-teller-and-successful-departure-of-a-customer-">II. Implement a simulation that will mimic the arrival of customers, service by the Teller and successful departure of a customer.</h2>
+<p>See code.</p>
+<h1 id="iii-assume-10-customers-arrive-every-minute-for-10-minutes-assume-each-service">III. Assume 10 customers arrive every minute for 10 minutes. Assume each service</h1>
+<p>time is of duration 1 unit. What is the average wait time for the 100 customers
+when there is (1) 1 Teller, (ii) 2 Tellers, (iii) 10 Tellers?</p>
+<ul>
+<li><strong>1 teller</strong> has 100 customers waiting an average of <strong>45.0 seconds</strong></li>
+<li><strong>2 tellers</strong> has 100 customers waiting an average of <strong>20.0 seconds</strong></li>
+<li><strong>10 tellers</strong> has 100 customers waiting an average of <strong>0 seconds</strong></li>
+</ul>
+<h1 id="iv-design-and-implement-unit-tests-integration-system-and-acceptance-tests-for-your-project-">IV. Design and implement unit tests, integration, system and acceptance tests for your project.</h1>
+<p>See <code style="font-family: Monaco;">tests/</code></p></body>
+</html>

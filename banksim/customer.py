@@ -48,6 +48,7 @@ class Customer(object):
         self.name = name[:64]
         self.visit_purpose = visit_purpose
         self.served = False
+        self.has_waited = 0
     
     def was_served(self):
         """
@@ -79,6 +80,24 @@ class Customer(object):
         served or not will be returned
         """
         self.served = True
+    
+    def wait_a_little(self, td=1):
+        """
+        `wait_a_little()`
+        Increments the time this customer has been waiting
+        
+        @pre    : the given Customer object must be initialized
+        @pre    : the time delta to add should be non-negative
+        @post   : the given Customer's waiting time will be incremented by td
+        
+        @param  : self  : Customer  : the customer object to operate upon
+        @param  : td    : int/float : the time delta to add to the customer's 
+        waiting time [default 1]
+        @return : none
+        """
+        assert type(td) == int or type(td) == float
+        assert td >= 0
+        self.has_waited += td
     
     def __str__(self):
         """
